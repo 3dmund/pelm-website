@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Porter - Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+  <link rel="stylesheet" href="main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload" style = "margin: 0px;">
+
+  <!-- HEADER -->
+  <div style = "display: flex; justify-content: center">
+    <div style = "width: 1000px; margin-top: 50px; display: flex; align-content: center; ">
+      <a href="index.html"><img style="width: 150px;" src="images/porter-logo.png" /></a>
+      <a class="header-link" href="product.html"> Product </a>
+      <a class="header-link" href="documentation.html"> Documentation </a>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div style = "display: flex; justify-content: center">
+    <div style = "width: 1000px; margin-top: 150px; margin-bottom: 300px; display: flex; justify-content: space-between;">
+      <div style = "width: 500px">
+        <div style="font-size: 60px; font-family:roboto-bold,roboto,sans-serif">Data pipeline<br/> for a smarter grid</div>
+        <div style="font-size: 23px; font-family:roboto,sans-serif; margin-top: 12px; color: #666666;">
+          <!-- Porter’s API empowers developers to build smart devices and apps that connect to utilities​ and
+          make the world a greener place. -->
+          Porter’s API empowers developers to build smart devices and apps that connect with utilities​ to harness consumer energy usage data.
+        </div>
+        <a style = "width: 200px; height: 50px; background-color: black; margin-top: 12px; text-decoration:none;" href="#contact-form-outter">
+          <div style = "width: 200px; height: 50px; background-color: black; margin-top: 24px; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
+            <div style="font-size: 23px; font-family:roboto,sans-serif; color: white">
+              <!-- Try our beta -->
+              Get API key
+            </div>
+          </div> 
+        </a>
+      </div>
+      <img style="width: 400px;" src="https://static.wixstatic.com/media/a2cf2d_30bcdb3bb48a41028e357c40b509161d~mv2.png/v1/fill/w_996,h_762,al_c,q_90/Screen%20Shot%202021-02-03%20at%207_02_55%20PM.webp" />
+    </div>
+
+  </div>
+
+  <div style = "display: flex; justify-content: center; background-color: #000000; padding: 150px 0px 150px 0px;">
+    <div style="display: flex; flex-direction: column; align-content: center; justify-content: center; width: 1500px">
+      <div style="font-size: 48px; font-family:roboto-bold,roboto,sans-serif; color: white; text-align: center;">A comprehensive utility integration</div>
+      <div style="font-size: 23px; font-family:roboto,sans-serif; margin-top: 12px; color: white; text-align: center; margin-bottom: 100px;">
+        Easily query consumer energy usage and billing data from utility providers across the country.
+      </div>
+
+      <div class="switch-field select-view" style="display: flex;
+      justify-content: center;">
+        <div class="switch-field-outer">
+          <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+          <label class="left" for="radio-one">Without Porter</label>
+          <input type="radio" id="radio-two" name="switch-one" value="no" />
+          <label class="right" for="radio-two">With Porter</label>
+
+        </div>
+        
+      </div>
+
+      <div class="content" style="display: flex; justify-content: space-around;">  
+        <div >
+          <img id="flowchart-without-porter" style="" src="images/flowchart-without-porter.png" />
+          <img id="flowchart-with-porter" style="display: none;" src="images/flowchart-with-porter.png" />
+
+        </div>
+
+        <div id="without-porter-summary" style="width: 500px; display: flex; flex-direction: column; justify-content: space-around;">
+          <div style="color: white">
+            <strong style="font-size: 23px; font-family:roboto-bold,roboto,sans-serif">
+              Lack of standarization
+            </strong>
+            <div style="font-size: 23px; font-family:roboto,sans-serif">
+              Different utilities have different data schemas and processes for connecting with their APIs.
+            </div>
+          </div>
+          <div style="color: white">
+            <strong style="font-size: 23px; font-family:roboto-bold,roboto,sans-serif">
+              Slow scaling
+            </strong>
+            <div style="font-size: 23px; font-family:roboto,sans-serif">
+              Each time you expand to a new area, you must connect with a new utility.
+            </div>
+          </div>
+          <div style="color: white">
+            <strong style="font-size: 23px; font-family:roboto-bold,roboto,sans-serif">
+              Limited access to utilities
+            </strong>
+            <div style="font-size: 23px; font-family:roboto,sans-serif">
+              Your app can only connect with utilities that offer a public API.
+            </div>
+          </div>
+        </div>
+
+        <div id="with-porter-summary" style="width: 500px; display: flex; flex-direction: column; justify-content: space-around; display: none;">
+          <div style="color: white">
+            <strong style="font-size: 23px; font-family:roboto-bold,roboto,sans-serif">
+              One API to rule them all
+            </strong>
+            <div style="font-size: 23px; font-family:roboto,sans-serif">
+              Connect with just one API and get access to energy usage data for any household in the country.
+            </div>
+          </div>
+          <div style="color: white">
+            <strong style="font-size: 23px; font-family:roboto-bold,roboto,sans-serif">
+              Scale rapidly
+            </strong>
+            <div style="font-size: 23px; font-family:roboto,sans-serif">
+              Expanding to a new region? We're probably already connected to the utility there.
+            </div>
+          </div>
+          <div style="color: white">
+            <strong style="font-size: 23px; font-family:roboto-bold,roboto,sans-serif">
+              Exclusive access to certain utilities
+            </strong>
+            <div style="font-size: 23px; font-family:roboto,sans-serif">
+              We're working on integrating Porter with utilities that don't offer a public API. Connect with Porter to get access to previously unavailable customers.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+<!-- USE CASES -->
+  <div style = "display: flex; justify-content: center;">
+    <div style = "width: 1000px; margin-top: 200px; margin-bottom: 100px; display: flex; flex-direction: column">
+      <div style="font-size: 40px; font-family:roboto-bold,roboto,sans-serif; margin-bottom: 40px">Empower your users with energy data</div>
+      <div style="display: flex; flex-flow: row wrap">
+        <div class="use-case-section-item use-case-section-item--left">
+          <img class="use-case-section-icon" src="images/use-case-data.png" />
+          <div>
+            <div style="font-size: 30px; font-family:roboto-bold,roboto,sans-serif">Data Analysis</div>
+            <div style="font-size: 23px; font-family:roboto,sans-serif; color: #666666;">
+              Help people understand their energy usage and save time/money.
+            </div>
+          </div>
+
+        </div>
+        <div class="use-case-section-item use-case-section-item--right">
+          <img class="use-case-section-icon" src="images/use-case-appliance.png" />
+          <div>
+            <div style="font-size: 30px; font-family:roboto-bold,roboto,sans-serif">Smart Appliances</div>
+            <div style="font-size: 23px; font-family:roboto,sans-serif; color: #666666;">
+              Create smart appliances that regulate their energy usage.
+            </div>
+          </div>
+        </div>
+        <div class="use-case-section-item , use-case-section-item--left">
+          <img class="use-case-section-icon" src="images/use-case-solar.png" />
+          <div>
+            <div style="font-size: 30px; font-family:roboto-bold,roboto,sans-serif">Solar Installations</div>
+            <div style="font-size: 23px; font-family:roboto,sans-serif; color: #666666;">
+              Help consumers understand the savings from switching to solar.
+            </div>
+          </div>
+
+        </div>
+        <div class="use-case-section-item , use-case-section-item--right">
+          <img class="use-case-section-icon" src="images/use-case-real-estate.png" />
+          <div>
+            <div style="font-size: 30px; font-family:roboto-bold,roboto,sans-serif">Real Estate</div>
+            <div style="font-size: 23px; font-family:roboto,sans-serif; color: #666666;">
+              Provide real estate agents and buyers with accurate energy data.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--@@@@@@@@@@@@@@@
+  FORM
+  @@@@@@@@@@@@@@@-->
+  <div style = "display: flex; justify-content: center;">
+    <div style = "width: 1000px; margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column">
+      <div style="font-size: 40px; font-family:roboto-bold,roboto,sans-serif; margin-bottom: 40px">Sign up for our Beta</div>
+      <div id="contact-form-outter">
+<!--        <form class="form" action="form.php" method="post" name="contact-form" target="formDestination">-->
+        <form class="form" action="javascript:void(0);" name="contact-form">
+          <p class="form-name">
+            <input class="text-field" type="text" name="name" id="name" placeholder="*Full Name" />
+          </p>
+          <p class="form-email">
+            <input class="text-field" type="text" name="email" id="email" placeholder="*Email" />
+          </p>
+          <p class="form-email">
+            <input class="text-field" type="text" name="email" id="company" placeholder="Company" />
+          </p>
+          <p class="form-message">
+            <textarea class="text-field" name="message" id="message" placeholder="Message" /></textarea>
+          </p>
+            <div style = "width: 200px; height: 50px; background-color: black; margin-top: 24px; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
+              <div style="font-size: 23px; font-family:roboto,sans-serif; color: white">
+                <input id="submit" type="submit" style = "width: 200px; height: 50px; border-radius: 5px; background-color: Transparent; font-size: 23px; font-family:roboto,sans-serif; color: white" value="Submit"/>
+              </div>
+            </div>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--@@@@@@@@@@@@@@@
+  FOOTER
+  @@@@@@@@@@@@@@@-->
+    <div style = "display: flex; justify-content: center; background-color: black;  margin-top: 100px;">
+      <div style = "width: 1000px; height: 150px; margin-top: 100px; margin-bottom: 100px; color: white; font-size: 23px; font-family:roboto,sans-serif;">
+        <strong>Resources</strong>
+        <br/>
+        <br/>
+        <a href="privacy-and-security-policy.html" style="text-decoration: none; color: white">Privacy and security policy</a>
+      </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+  </html>
