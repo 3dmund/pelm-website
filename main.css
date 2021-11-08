@@ -1,3 +1,12 @@
+
+.header-container {
+  width: 1000px; margin-top: 50px; display: flex; justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+}
+
 .header-link {
   display: flex;
   justify-content: center;
@@ -174,4 +183,9 @@
 
 .privacy-and-security-policy-body {
   font-size: 23px; font-family:roboto,sans-serif; color: #666666;
+}
+
+
+.register-form-row {
+  width: 500px;
 }

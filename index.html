@@ -12,11 +12,16 @@
 
   <!-- HEADER -->
   <div style = "display: flex; justify-content: center">
-    <div style = "width: 1000px; margin-top: 50px; display: flex; align-content: center; ">
-      <a href="index.html"><img style="width: 150px;" src="images/porter-logo.png" /></a>
-      <a class="header-link" href="product.html"> Product </a>
-      <a class="header-link" href="documentation.html"> Documentation </a>
+    <div class="header-container">
+      <div class="header-content">
+        <a href="index.html"><img style="width: 150px;" src="images/porter-logo.png" /></a>
+        <a class="header-link" href="product.html"> Product </a>
+        <a class="header-link" href="documentation.html"> Documentation </a>
+      </div>
+      <a class="header-link" href="register.html"> Sign up </a>
+
     </div>
+
   </div>
 
   <!-- INTRO -->
@@ -29,7 +34,8 @@
           make the world a greener place. -->
           Porter’s API empowers developers to build smart devices and apps that connect with utilities​ to harness consumer energy usage data.
         </div>
-        <a style = "width: 200px; height: 50px; background-color: black; margin-top: 12px; text-decoration:none;" href="#contact-form-outter">
+<!--        <a style = "width: 200px; height: 50px; background-color: black; margin-top: 12px; text-decoration:none;" href="#contact-form-outter">-->
+        <a style = "width: 200px; height: 50px; background-color: black; margin-top: 12px; text-decoration:none;" href="register.html">
           <div style = "width: 200px; height: 50px; background-color: black; margin-top: 24px; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
             <div style="font-size: 23px; font-family:roboto,sans-serif; color: white">
               <!-- Try our beta -->
@@ -47,7 +53,7 @@
     <div style="display: flex; flex-direction: column; align-content: center; justify-content: center; width: 1500px">
       <div style="font-size: 48px; font-family:roboto-bold,roboto,sans-serif; color: white; text-align: center;">A comprehensive utility integration</div>
       <div style="font-size: 23px; font-family:roboto,sans-serif; margin-top: 12px; color: white; text-align: center; margin-bottom: 100px;">
-        @@@ Easily query consumer energy usage and billing data from utility providers across the country.
+        Easily query consumer energy usage and billing data from utility providers across the country.
       </div>
 
       <div class="switch-field select-view" style="display: flex;
@@ -175,39 +181,6 @@
         </div>
 
       </div>
-    </div>
-  </div>
-
-  <!--@@@@@@@@@@@@@@@
-  FORM
-  @@@@@@@@@@@@@@@-->
-  <div style = "display: flex; justify-content: center;">
-    <div style = "width: 1000px; margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column">
-      <div style="font-size: 40px; font-family:roboto-bold,roboto,sans-serif; margin-bottom: 40px">Sign up for our Beta</div>
-      <div id="contact-form-outter">
-<!--        <form class="form" action="form.php" method="post" name="contact-form" target="formDestination">-->
-        <form class="form" action="javascript:void(0);" name="contact-form">
-          <p class="form-name">
-            <input class="text-field" type="text" name="name" id="name" placeholder="*Full Name" />
-          </p>
-          <p class="form-email">
-            <input class="text-field" type="text" name="email" id="email" placeholder="*Email" />
-          </p>
-          <p class="form-email">
-            <input class="text-field" type="text" name="email" id="company" placeholder="Company" />
-          </p>
-          <p class="form-message">
-            <textarea class="text-field" name="message" id="message" placeholder="Message" /></textarea>
-          </p>
-            <div style = "width: 200px; height: 50px; background-color: black; margin-top: 24px; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
-              <div style="font-size: 23px; font-family:roboto,sans-serif; color: white">
-                <input id="submit" type="submit" style = "width: 200px; height: 50px; border-radius: 5px; background-color: Transparent; font-size: 23px; font-family:roboto,sans-serif; color: white" value="Submit"/>
-              </div>
-            </div>
-          </p>
-        </form>
-      </div>
-
     </div>
   </div>
 

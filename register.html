@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Porter - Register</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+    <link rel="stylesheet" href="main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body>
+    <div style = "display: flex; justify-content: center;">
+        <div style = "margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column">
+            <div style="font-size: 40px; font-family:roboto-bold,roboto,sans-serif; margin-bottom: 40px">Create your Porter account</div>
+            <div id="contact-form-outter">
+                <!--        <form class="form" action="form.php" method="post" name="contact-form" target="formDestination">-->
+<!--                <form action="https://api.portertech.io/auth/register" method="POST">-->
+                <form action="http://127.0.0.1:5000/auth/register" method="POST">
+                    <p class="register-form-row">
+                        <input class="text-field" type="text" name="name" id="name" placeholder="*Full Name" />
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" type="text" name="email" id="email" placeholder="*Email" />
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" type="password" name="password" id="password" placeholder="*Password" />
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" type="text" name="company" id="company" placeholder="Company" />
+                    </p>
+                    <div style = "width: 500px; height: 50px; background-color: black; margin-top: 50px; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
+                        <div style="font-size: 23px; font-family:roboto,sans-serif; color: white">
+                            <input id="submit" type="submit" style = "width: 500px; height: 50px; border-radius: 5px; background-color: Transparent; font-size: 23px; font-family:roboto,sans-serif; color: white" value="Create account"/>
+                        </div>
+                    </div>
+                    </p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
