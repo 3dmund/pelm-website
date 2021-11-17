@@ -11,44 +11,50 @@
 <body class="is-preload" style = "margin: 0px;">
 
   <!-- HEADER -->
-  <div style = "display: flex; justify-content: center">
+  <div class="section-outer">
     <div class="header-container">
       <div class="header-content">
         <a href="index.html"><img style="width: 150px;" src="images/pelm-logo-with-text.png" /></a>
         <a class="header-link" href="product.html"> Product </a>
         <a class="header-link" href="documentation.html"> Documentation </a>
       </div>
-      <a class="header-link" href="register.html"> Sign up </a>
-
+      <a id="sign-up-link" class="header-link" href="register.html"> Sign up </a>
     </div>
-
   </div>
 
   <!-- INTRO -->
-  <div style = "display: flex; justify-content: center">
-    <div style = "width: 1000px; margin-top: 150px; margin-bottom: 300px; display: flex; justify-content: space-between;">
-      <div style = "width: 500px">
-        <div style="font-size: 60px; font-family:roboto-bold,roboto,sans-serif">Data pipeline<br/> for a smarter grid</div>
-        <div style="font-size: 23px; font-family:roboto,sans-serif; margin-top: 12px; color: #666666;">
-          Pelm’s API empowers developers to build smart devices and apps that connect with utilities​ to harness consumer energy usage data.
-        </div>
-<!--        <a style = "width: 200px; height: 50px; background-color: black; margin-top: 12px; text-decoration:none;" href="#contact-form-outter">-->
-        <a style = "width: 200px; height: 50px; background-color: black; margin-top: 12px; text-decoration:none;" href="register.html">
-          <div style = "width: 200px; height: 50px; background-color: black; margin-top: 24px; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
-            <div style="font-size: 23px; font-family:roboto,sans-serif; color: white">
-              <!-- Try our beta -->
-              Get API key
+  <div class="section-outer">
+    <div class="section-inner">
+      <div class="intro-section-inner">
+        <div style = "width: 500px">
+          <div style="font-size: 60px; font-family:roboto-bold,roboto,sans-serif">Data pipeline<br/> for a smarter grid</div>
+          <div style="font-size: 23px; font-family:roboto,sans-serif; margin-top: 12px; color: #666666;">
+            Pelm’s API empowers developers to build smart devices and apps that connect with utilities​ to harness consumer energy usage data.
+          </div>
+          <!--        <a style = "width: 200px; height: 50px; background-color: black; margin-top: 12px; text-decoration:none;" href="#contact-form-outter">-->
+          <a style = "width: 200px; height: 50px; background-color: black; margin-top: 12px; text-decoration:none;" href="register.html">
+            <div style = "width: 200px; height: 50px; background-color: black; margin-top: 24px; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
+              <div style="font-size: 23px; font-family:roboto,sans-serif; color: white">
+                <!-- Try our beta -->
+                Get API key
+              </div>
             </div>
-          </div> 
-        </a>
+          </a>
+        </div>
+        <img class="intro-illustration" style="width: 400px;" src="https://static.wixstatic.com/media/a2cf2d_30bcdb3bb48a41028e357c40b509161d~mv2.png/v1/fill/w_996,h_762,al_c,q_90/Screen%20Shot%202021-02-03%20at%207_02_55%20PM.webp" />
       </div>
-      <img style="width: 400px;" src="https://static.wixstatic.com/media/a2cf2d_30bcdb3bb48a41028e357c40b509161d~mv2.png/v1/fill/w_996,h_762,al_c,q_90/Screen%20Shot%202021-02-03%20at%207_02_55%20PM.webp" />
+
     </div>
 
   </div>
 
-  <div style = "display: flex; justify-content: center; background-color: #000000; padding: 150px 0px 150px 0px;">
-    <div style="display: flex; flex-direction: column; align-content: center; justify-content: center; width: 1500px">
+  <!--
+  INFO
+  -->
+<!--  <div style = "display: flex; justify-content: center; background-color: #000000; padding: 150px 0px 150px 0px;">-->
+<!--    <div style="display: flex; flex-direction: column; align-content: center; justify-content: center; width: 1500px">-->
+  <div class="section-outer info-section-outer">
+    <div class="section-inner info-section-inner">
       <div style="font-size: 48px; font-family:roboto-bold,roboto,sans-serif; color: white; text-align: center;">A comprehensive utility integration</div>
       <div style="font-size: 23px; font-family:roboto,sans-serif; margin-top: 12px; color: white; text-align: center; margin-bottom: 100px;">
         Easily query consumer energy usage and billing data from utility providers across the country.
@@ -66,14 +72,12 @@
         
       </div>
 
-      <div class="content" style="display: flex; justify-content: space-around;">  
-        <div >
-          <img id="flowchart-without-pelm" style="" src="images/flowchart-without-pelm.png" />
-          <img id="flowchart-with-pelm" style="display: none;" src="images/flowchart-with-pelm.png" />
+      <div class="info-content">
+        <img id="flowchart-without-pelm" class="flowchart" src="images/flowchart-without-pelm.png" />
+        <img id="flowchart-with-pelm" class="flowchart" style="display: none;" src="images/flowchart-with-pelm.png" />
 
-        </div>
 
-        <div id="without-pelm-summary" style="width: 500px; display: flex; flex-direction: column; justify-content: space-around;">
+        <div id="without-pelm-summary" class="info-summary">
           <div style="color: white">
             <strong style="font-size: 23px; font-family:roboto-bold,roboto,sans-serif">
               Lack of standarization
@@ -100,7 +104,7 @@
           </div>
         </div>
 
-        <div id="with-pelm-summary" style="width: 500px; display: flex; flex-direction: column; justify-content: space-around; display: none;">
+        <div id="with-pelm-summary" class="info-summary">
           <div style="color: white">
             <strong style="font-size: 23px; font-family:roboto-bold,roboto,sans-serif">
               One API to rule them all
@@ -135,30 +139,21 @@
   </div>
 
 <!-- USE CASES -->
-  <div style = "display: flex; justify-content: center;">
-    <div style = "width: 1000px; margin-top: 200px; margin-bottom: 100px; display: flex; flex-direction: column">
+  <div class="section-outer">
+<!--    <div style = "width: 1000px; margin-top: 200px; margin-bottom: 100px; display: flex; flex-direction: column">-->
+    <div class="section-inner">
       <div style="font-size: 40px; font-family:roboto-bold,roboto,sans-serif; margin-bottom: 40px">Empower your users with energy data</div>
-      <div style="display: flex; flex-flow: row wrap">
-        <div class="use-case-section-item use-case-section-item--left">
-          <img class="use-case-section-icon" src="images/use-case-data.png" />
-          <div>
-            <div style="font-size: 30px; font-family:roboto-bold,roboto,sans-serif">Data Analysis</div>
-            <div style="font-size: 23px; font-family:roboto,sans-serif; color: #666666;">
-              Help people understand their energy usage and save time/money.
-            </div>
-          </div>
-
-        </div>
-        <div class="use-case-section-item use-case-section-item--right">
+      <div class="use-case-items">
+        <div class="use-case-section-item">
           <img class="use-case-section-icon" src="images/use-case-appliance.png" />
           <div>
             <div style="font-size: 30px; font-family:roboto-bold,roboto,sans-serif">Smart Appliances</div>
             <div style="font-size: 23px; font-family:roboto,sans-serif; color: #666666;">
-              Create smart appliances that regulate their energy usage.
+              Create smart appliances that regulate their energy usage and run when electricity is cheapest.
             </div>
           </div>
         </div>
-        <div class="use-case-section-item , use-case-section-item--left">
+        <div class="use-case-section-item">
           <img class="use-case-section-icon" src="images/use-case-solar.png" />
           <div>
             <div style="font-size: 30px; font-family:roboto-bold,roboto,sans-serif">Solar Installations</div>
@@ -166,9 +161,17 @@
               Help consumers understand the savings from switching to solar.
             </div>
           </div>
-
         </div>
-        <div class="use-case-section-item , use-case-section-item--right">
+        <div class="use-case-section-item">
+          <img class="use-case-section-icon" src="images/use-case-data.png" />
+          <div>
+            <div style="font-size: 30px; font-family:roboto-bold,roboto,sans-serif">Data Analysis</div>
+            <div style="font-size: 23px; font-family:roboto,sans-serif; color: #666666;">
+              Help people understand their energy usage and save time/money.
+            </div>
+          </div>
+        </div>
+        <div class="use-case-section-item">
           <img class="use-case-section-icon" src="images/use-case-real-estate.png" />
           <div>
             <div style="font-size: 30px; font-family:roboto-bold,roboto,sans-serif">Real Estate</div>
@@ -186,8 +189,8 @@
   <!--@@@@@@@@@@@@@@@
   FOOTER
   @@@@@@@@@@@@@@@-->
-    <div style = "display: flex; justify-content: center; background-color: black;  margin-top: 100px;">
-      <div style = "width: 1000px; height: 150px; margin-top: 100px; margin-bottom: 100px; color: white; font-size: 23px; font-family:roboto,sans-serif;">
+    <div class="section-outer footer-section-outer" >
+      <div class="section-inner footer-section-inner" >
         <strong>Resources</strong>
         <br/>
         <br/>
