@@ -1,0 +1,23 @@
+#documentation-intro-section {
+    text-align: left;
+}
+
+.documentation-intro-section-inner {
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.documentation-intro-illustration {
+    width: 500px; margin-bottom: 40px;
+}
+
+@media (max-width: 999px) {
+    .documentation-intro-illustration {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    #documentation-intro-section {
+        text-align: center;
+    }
+}
