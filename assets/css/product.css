@@ -18,7 +18,7 @@
 
 
 
-li {
+#steps li {
     font-size: 25px;
     font-weight: normal;
     font-family:roboto-bold,roboto,sans-serif;
@@ -36,7 +36,7 @@ li {
         font-size: 40px;
     }
 
-    li {
+    #steps li {
         font-size: 30px;
         margin-bottom: 20px;
     }
