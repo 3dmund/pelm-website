@@ -15,54 +15,35 @@
             <header class="header">
                 <nav class="navbar">
                     <a href="index.html"><img style="width: 150px;" src="images/pelm-logo-with-text.png" /></a>
-<!--                    <ul class="nav-menu">-->
-<!--                        <li class="nav-item">-->
-<!--                            <a href="product.html" class="nav-link">Product</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item">-->
-<!--                            <a href="documentation.html" class="nav-link">Documentation</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item">-->
-<!--                            <a href="register.html" class="nav-link">Sign up</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--    -->
-<!--                    <div class="hamburger">-->
-<!--                        <span class="bar"></span>-->
-<!--                        <span class="bar"></span>-->
-<!--                        <span class="bar"></span>-->
-<!--                    </div>-->
                 </nav>
             </header>
         </div>
     </div>
 
-    <div style = "display: flex; justify-content: center;">
-        <div style = "margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column">
+    <div class="section-outer">
+<!--        <div style = "margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column">-->
+        <div class="register-form-section-inner">
             <div style="font-size: 40px; font-family:roboto-bold,roboto,sans-serif; margin-bottom: 40px">Create your Pelm account</div>
-            <div id="contact-form-outter">
-                <form action="https://api.portertech.io/auth/register" method="POST">
+
+<!--            <div id="contact-form-outter">-->
+            <form action="https://api.portertech.io/auth/register" method="POST">
 <!--                <form action="http://127.0.0.1:5000/auth/register" method="POST">-->
-                    <p class="register-form-row">
-                        <input class="text-field" type="text" name="name" id="name" placeholder="Full Name" />
-                    </p>
-                    <p class="register-form-row">
-                        <input class="text-field" type="text" name="email" id="email" placeholder="*Email" required/>
-                    </p>
-                    <p class="register-form-row">
-                        <input class="text-field" type="password" name="password" id="password" placeholder="*Password" required/>
-                    </p>
-                    <p class="register-form-row">
-                        <input class="text-field" type="text" name="company" id="company" placeholder="Company" />
-                    </p>
-                    <div style = "width: 500px; height: 50px; background-color: black; margin-top: 50px; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
-                        <div style="font-size: 23px; font-family:roboto,sans-serif; color: white">
-                            <input id="submit" type="submit" style = "width: 500px; height: 50px; border-radius: 5px; background-color: Transparent; font-size: 23px; font-family:roboto,sans-serif; color: white" value="Create account"/>
-                        </div>
-                    </div>
-                    </p>
-                </form>
-            </div>
+                <p class="register-form-row">
+                    <input class="text-field" type="text" name="name" id="name" placeholder="Full Name" />
+                </p>
+                <p class="register-form-row">
+                    <input class="text-field" type="text" name="email" id="email" placeholder="*Email" required/>
+                </p>
+                <p class="register-form-row">
+                    <input class="text-field" type="password" name="password" id="password" placeholder="*Password" required/>
+                </p>
+                <p class="register-form-row">
+                    <input class="text-field" type="text" name="company" id="company" placeholder="Company" />
+                </p>
+                <input id="submit" type="submit" class="submit-form-button" value="Create account"/>
+                </p>
+            </form>
+<!--            </div>-->
 
         </div>
     </div>
