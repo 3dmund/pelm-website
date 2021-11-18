@@ -494,6 +494,39 @@ strong {
   font-size: 23px; font-family:roboto,sans-serif; color: #666666;
 }
 
+/******FORM*******/
+#formDestination {
+  display: none;
+}
+#contact-form-outter {
+  /*border: 1px solid #999999;*/
+  width: 60%;
+  /*height: 40%;*/
+  /*padding: 50px;*/
+  /*margin-left: 20%;*/
+  margin-bottom: 70px;
+  font-size: 30px;
+}
+#message {
+  padding-bottom: 0px;
+}
+.text-field {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid #cccccc;
+  width: 100%;
+  max-width: 100%;
+  font-size: 25px;
+  line-height: 40px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  color: black;
+  font-family:roboto,sans-serif;
+}
+.text-field:focus {
+  border-bottom: 2px solid black;
+}
 
 .register-form-row {
   width: 500px;
