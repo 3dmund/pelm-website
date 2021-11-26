@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 <html>
 <head>
   <title>Pelm - Product</title>
@@ -73,11 +76,11 @@
     <div class="section-inner product-steps-section-inner">
     <h1 class="product-steps-h1">Start querying energy data in two easy steps</h1>
       <ol>
-        <li>Permission a user's data with /auth/consumer</li>
+        <li>Permission a user's data with /auth/</li>
         <p id="product-step1">
           We’ll redirect the user to their utility provider to grant Pelm acess to their data and permission to share that data with you. Once the user completes the auth flow, we redirect them to the redirectUrl provided by you and we share a OAuth token with you.
         </p>
-        <li>Query data with /data</li>
+        <li>Query data with /intervals/</li>
         <p>
           Make a request to our endpoint to get user data, and we’ll send you back a JSON response based on the parameters you specify (time range, usage point, etc).
         </p>
