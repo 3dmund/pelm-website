@@ -4,8 +4,8 @@ html {
 
 h1 {
   font-size: 35px;
-  font-weight: normal;
-  font-family:roboto-bold,roboto,sans-serif;
+  font-family:roboto,sans-serif;
+  font-weight: 500;
 }
 
 h2 {
@@ -134,6 +134,8 @@ strong {
 .header-section-inner {
   width: 1000px;
   margin-top: 50px;
+  font-family:roboto,sans-serif;
+  font-weight: 500;
 }
 
 .navbar {
@@ -249,7 +251,10 @@ strong {
 }
 
 .intro-sub-title {
-  margin-top: 12px; color: #666666;
+  margin-top: 12px;
+  color: #666666;
+  font-family:roboto,sans-serif;
+  font-weight: 400;
 }
 
 @media (max-width: 999px) {
@@ -302,6 +307,8 @@ strong {
 .info-sub-header {
   /*margin-top: 12px; */
   text-align: center; margin-bottom: 100px;
+  font-family:roboto,sans-serif;
+  font-weight: 400;
 }
 
 .switch-field {
@@ -330,6 +337,7 @@ strong {
 
 .switch-field label {
   font-family: roboto,sans-serif;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1;
   text-align: center;
@@ -398,6 +406,8 @@ strong {
   display: flex;
   width: 450px;
   margin-bottom: 40px;
+  font-family:roboto,sans-serif;
+  font-weight: 400;
 }
 
 .use-case-section-icon {
@@ -546,6 +556,8 @@ strong {
 .register-form-row {
   /*width: 500px;*/
   width: 100%;
+  font-family:roboto,sans-serif;
+  font-weight: 400;
 }
 
 .submit-form-button {
@@ -553,6 +565,7 @@ strong {
   width: 100%;
   height: 50px; background-color: black; margin-top: 50px; border-radius: 5px; display: flex; justify-content: center; align-items: center;
   font-size: 23px; font-family:roboto,sans-serif;
+  font-weight: 400;
   color: white;
 }
 
