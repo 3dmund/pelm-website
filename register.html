@@ -29,7 +29,7 @@
             <div style="font-size: 40px; font-family:roboto,sans-serif; margin-bottom: 40px; font-weight:500;">Sign up for Pelm Beta</div>
 
 <!--            <div id="contact-form-outer">-->
-            <form action="https://api.pelm.com/auth/register" method="POST">
+            <form action="https://api.pelm.com/register" method="POST">
 <!--                <form action="http://127.0.0.1:5000/auth/register" method="POST">-->
                 <p class="register-form-row">
                     <input class="text-field" name="name" id="name" placeholder="Full Name*" required/>
@@ -41,7 +41,7 @@
                     <input class="text-field" type="password" name="password" id="password" placeholder="Password*" required/>
                 </p>
                 <p class="register-form-row">
-                    <input class="text-field" name="redirect_url" id="redirect_url" placeholder="Redirect URL*" required pattern=".+\..+" title="Please enter a valid URL"/>
+                    <input class="text-field" name="redirect_uri" id="redirect_uri" placeholder="Redirect URI*" required pattern=".+\..+" title="Please enter a valid URI"/>
                 </p>
                 <p class="register-form-row">
                     <input class="text-field" name="company" id="company" placeholder="Company*" required/>
