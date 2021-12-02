@@ -10,6 +10,27 @@
     <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#register-form").submit(function() { // intercepts the submit event
+                $.ajax({ // make an AJAX request
+                    type: "POST",
+                    url: "B", // it's the URL of your component B
+                    data: $("#register-form").serialize(), // serializes the form's elements
+                    success: function(data)
+                    {
+                        console.log(data)
+                        // show the data you got from B in result div
+                        $("#result").html(data);
+                    }
+                });
+                e.preventDefault(); // avoid to execute the actual submit of the form
+            });
+
+        });
+    </script>
 </head>
 <body>
     <!-- HEADER -->
@@ -29,7 +50,7 @@
             <div style="font-size: 40px; font-family:roboto,sans-serif; margin-bottom: 40px; font-weight:500;">Sign up for Pelm Beta</div>
 
 <!--            <div id="contact-form-outer">-->
-            <form action="https://api.pelm.com/register" method="POST">
+            <form id="register-form" action="https://api.pelm.com/register" method="POST">
 <!--                <form action="http://127.0.0.1:5000/auth/register" method="POST">-->
                 <p class="register-form-row">
                     <input class="text-field" name="name" id="name" placeholder="Full Name*" required/>
@@ -63,6 +84,8 @@
 
         </div>
     </div>
+
+    <div id="result"></div>
 
 </body>
 </html>
