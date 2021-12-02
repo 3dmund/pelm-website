@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 <html lang="en">
 <head>
     <title>Pelm - Register</title>
@@ -25,26 +26,25 @@
     <div class="section-outer">
 <!--        <div style = "margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column">-->
         <div class="register-form-section-inner">
-            <div style="font-size: 40px; font-family:Roboto,roboto-bold,roboto,sans-serif; margin-bottom: 40px">Sign up for Pelm Beta</div>
+            <div style="font-size: 40px; font-family:roboto,sans-serif; margin-bottom: 40px; font-weight:500;">Sign up for Pelm Beta</div>
 
-<!--            <div id="contact-form-outter">-->
-            <form action="https://api.pelm.com/auth/register" method="POST">
+<!--            <div id="contact-form-outer">-->
+            <form action="https://api.pelm.com/register" method="POST">
 <!--                <form action="http://127.0.0.1:5000/auth/register" method="POST">-->
-                <!-- <form action="http://127.0.0.1:5000/auth/register" method="POST"> -->
                 <p class="register-form-row">
-                    <input class="text-field" type="text" name="name" id="name" placeholder="Full Name*" required/>
+                    <input class="text-field" name="name" id="name" placeholder="Full Name*" required/>
                 </p>
                 <p class="register-form-row">
-                    <input class="text-field" type="text" name="email" id="email" placeholder="Email*" required pattern=".+@.+\..+" title="Please enter a valid email"/>
+                    <input class="text-field" name="email" id="email" placeholder="Email*" required pattern=".+@.+\..+" title="Please enter a valid email"/>
                 </p>
                 <p class="register-form-row">
                     <input class="text-field" type="password" name="password" id="password" placeholder="Password*" required/>
                 </p>
                 <p class="register-form-row">
-                    <input class="text-field" type="text" name="redirect_url" id="redirect_url" placeholder="Redirect URL*" required pattern=".+\..+" title="Please ennter a valid URL"/>
+                    <input class="text-field" name="redirect_uri" id="redirect_uri" placeholder="Redirect URI*" required pattern=".+\..+" title="Please enter a valid URI"/>
                 </p>
                 <p class="register-form-row">
-                    <input class="text-field" type="text" name="company" id="company" placeholder="Company*" required/>
+                    <input class="text-field" name="company" id="company" placeholder="Company*" required/>
                 </p>
                 <p class="register-form-row">
                     <div class="custom-select" style="">
