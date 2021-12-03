@@ -103,6 +103,7 @@ function processForm(e) {
         type: "POST",
         url: "https://api.pelm.com/register", // it's the URL of your component B
         crossDomain: true,
+        dataType: 'jsonp',
         data: $("#register-form").serialize(), // serializes the form's elements
         success: function(data)
         {
@@ -129,7 +130,7 @@ if (form.attachEvent) {
             console.log("BANANA")
             $.ajax({ // make an AJAX request
                 type: "POST",
-                url: "B", // it's the URL of your component B
+                url: "https://api.pelm.com/register", // it's the URL of your component B
                 data: $("#register-form").serialize(), // serializes the form's elements
                 success: function(data)
                 {
