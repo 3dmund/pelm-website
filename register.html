@@ -7,7 +7,6 @@
     <title>Pelm - Register</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
@@ -21,31 +20,17 @@
                     data: $("#register-form").serialize(), // serializes the form's elements
                     success: function(data)
                     {
-                        console.log(data)
-                        // $("#register-form").hide()
                         $('#form').hide()
                         $('#confirmation').show()
-                        // show the data you got from B in result div
 
                         var client_id = data.client_id
                         var client_secret = data.client_secret
-                        var client_id2 = data['client_id']
-                        console.log(client_id)
-                        console.log(client_id2)
 
-                        var html = "<div class='new'>" + client_id + "</div>"
-
-                        // $("#result").html(html);
                         $('#client_id').html(client_id)
                         $('#client_secret').html(client_secret)
                     },
                     error: function (data) {
-                        console.log("ERROR");
-                        console.log(data)
-                        console.log(data.message)
                         var r = jQuery.parseJSON(data.responseText);
-                        console.log("r")
-                        console.log(r)
 
                         alert(r.message);
                     }
@@ -70,14 +55,10 @@
     </div>
 
     <div class="section-outer" style="width: 100%;">
-<!--        <div style = "margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column">-->
         <div class="register-page-section-inner">
             <div id="form" class="register-form-container">
                 <div style="font-size: 40px; font-family:roboto,sans-serif; margin-bottom: 40px; font-weight:500;">Sign up for Pelm Beta</div>
-
-                <!--            <div id="contact-form-outer">-->
                 <form id="register-form" action="https://api.pelm.com/register" method="POST">
-                    <!--                <form action="http://127.0.0.1:5000/auth/register" method="POST">-->
                     <p class="register-form-row">
                         <input class="text-field" name="name" id="name" placeholder="Full Name*" required/>
                     </p>
@@ -113,40 +94,24 @@
                 <p>
                     Here are your client credentials. Please store them in a secure location.
                     </br>
+                    </br>
                     Client id: <strong id="client_id"></strong>
                     </br>
                     Client secret: <strong id="client_secret"></strong>
                     </br>
-                    Quickly get started by visiting our <a href="https://pelm.readme.io/reference/quick-start-guide">Quick Start Guide</a>.
+                    </br>
+                    Quickly get started by visiting our <a style="color: #0000EE" href="https://pelm.readme.io/reference/quick-start-guide">Quick Start Guide</a>.
                     </br>
                     If you have any questions, email <strong>info@pelm.com</strong>
-
                 </p>
-
-<!--                <p>Client id: <strong id="client_id"></strong></p>-->
-<!--                <p>Client secret: <strong id="client_secret"></strong></p>-->
-
-<!--                <p></p>-->
 
                 <form action="https://pelm.readme.io/reference/welcome">
                     <input type="submit" class="submit-form-button" value="Get Started"/>
                 </form>
-<!--                <button  class="submit-form-button">Continue</button>-->
-
-<!--                This is the confirmation page. Yay!-->
-
-<!--                <div id="client_id"></div>-->
-<!--                <div id="client_secret"></div>-->
 
             </div>
-
-<!--            </div>-->
-
         </div>
     </div>
-
-<!--    <div id="result"></div>-->
-
 </body>
 </html>
 
