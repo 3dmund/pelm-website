@@ -102,6 +102,7 @@ function processForm(e) {
     $.ajax({ // make an AJAX request
         type: "POST",
         url: "https://api.pelm.com/register", // it's the URL of your component B
+        crossDomain: true,
         data: $("#register-form").serialize(), // serializes the form's elements
         success: function(data)
         {
