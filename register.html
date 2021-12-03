@@ -142,62 +142,6 @@
 
 <script>
 
-// function processForm(e) {
-//     if (e.preventDefault) e.preventDefault();
-//
-//     /* do what you want with the form */
-//
-//     console.log("APPLE")
-//
-//     $.ajax({ // make an AJAX request
-//         type: "POST",
-//         url: "https://api.pelm.com/register", // it's the URL of your component B
-//         crossDomain: true,
-//         crossOrigin: true,
-//         // dataType: 'jsonp',
-//         data: $("#register-form").serialize(), // serializes the form's elements
-//         headers: {
-//             'Access-Control-Allow-Origin': '*'
-//         },
-//         success: function(data)
-//         {
-//             console.log(data)
-//             // show the data you got from B in result div
-//             $("#result").html(data);
-//         }
-//     });
-//
-//     // You must return false to prevent the default form behavior
-//     return false;
-// }
-//
-// var form = document.getElementById('register-form');
-// if (form.attachEvent) {
-//     form.attachEvent("submit", processForm);
-// } else {
-//     form.addEventListener("submit", processForm);
-// }
-//
-//     $(document).ready(function(e) {
-//
-//         $("#register-form").submit(function(e) { // intercepts the submit event
-//             console.log("BANANA")
-//             $.ajax({ // make an AJAX request
-//                 type: "POST",
-//                 url: "https://api.pelm.com/register", // it's the URL of your component B
-//                 data: $("#register-form").serialize(), // serializes the form's elements
-//                 success: function(data)
-//                 {
-//                     console.log(data)
-//                     // show the data you got from B in result div
-//                     $("#result").html(data);
-//                 }
-//             });
-//             e.preventDefault(); // avoid to execute the actual submit of the form
-//         });
-//
-//     });
-
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
