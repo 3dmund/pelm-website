@@ -99,6 +99,18 @@ function processForm(e) {
 
     console.log("APPLE")
 
+    $.ajax({ // make an AJAX request
+        type: "POST",
+        url: "https://api.pelm.com/register", // it's the URL of your component B
+        data: $("#register-form").serialize(), // serializes the form's elements
+        success: function(data)
+        {
+            console.log(data)
+            // show the data you got from B in result div
+            $("#result").html(data);
+        }
+    });
+
     // You must return false to prevent the default form behavior
     return false;
 }
@@ -110,7 +122,7 @@ if (form.attachEvent) {
     form.addEventListener("submit", processForm);
 }
 
-    $(document).ready(function() {
+    $(document).ready(function(e) {
 
         $("#register-form").submit(function(e) { // intercepts the submit event
             console.log("BANANA")
