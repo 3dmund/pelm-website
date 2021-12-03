@@ -516,6 +516,9 @@ strong {
 /******FORM*******/
 .register-page-section-inner {
   margin-top: 100px; margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .register-form-container {
