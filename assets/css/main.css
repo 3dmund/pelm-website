@@ -514,9 +514,18 @@ strong {
 }
 
 /******FORM*******/
-.register-form-section-inner {
-  margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column;
+.register-page-section-inner {
+  margin-top: 100px; margin-bottom: 100px;
+}
+
+.register-form-container {
+  display: flex; flex-direction: column;
   width: min(500px, 90%);
+}
+
+.register-confirmation-container {
+  display: none;
+  width: min(700px, 90%);
 }
 
 #formDestination {
