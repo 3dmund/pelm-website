@@ -41,10 +41,8 @@
                     },
                     error: function (data) {
                         console.log("ERROR");
-                        var r = jQuery.parseJSON(data.responseText);
-                        alert("Message: " + r.Message);
-                        alert("StackTrace: " + r.StackTrace);
-                        alert("ExceptionType: " + r.ExceptionType);
+                        console.log(data)
+                        alert(data);
                     }
                 });
                 e.preventDefault(); // avoid to execute the actual submit of the form
