@@ -38,6 +38,12 @@
                         // $("#result").html(html);
                         $('#client_id').html(client_id)
                         $('#client_secret').html(client_secret)
+                    },
+                    error: function (data) {
+                        var r = jQuery.parseJSON(data.responseText);
+                        alert("Message: " + r.Message);
+                        alert("StackTrace: " + r.StackTrace);
+                        alert("ExceptionType: " + r.ExceptionType);
                     }
                 });
                 e.preventDefault(); // avoid to execute the actual submit of the form
