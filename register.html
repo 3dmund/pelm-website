@@ -106,6 +106,9 @@ function processForm(e) {
         crossOrigin: true,
         // dataType: 'jsonp',
         data: $("#register-form").serialize(), // serializes the form's elements
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
         success: function(data)
         {
             console.log(data)
