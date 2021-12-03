@@ -91,9 +91,29 @@
 </html>
 
 <script>
+
+function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+
+    /* do what you want with the form */
+
+    console.log("APPLE")
+
+    // You must return false to prevent the default form behavior
+    return false;
+}
+
+var form = document.getElementById('register-form');
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
+}
+
     $(document).ready(function() {
 
         $("#register-form").submit(function(e) { // intercepts the submit event
+            console.log("BANANA")
             $.ajax({ // make an AJAX request
                 type: "POST",
                 url: "B", // it's the URL of your component B
@@ -109,6 +129,7 @@
         });
 
     });
+
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
