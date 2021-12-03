@@ -40,7 +40,14 @@
                         $('#client_secret').html(client_secret)
                     },
                     error: function (data) {
-                        alert(data.responseText.message);
+                        console.log("ERROR");
+                        console.log(data)
+                        console.log(data.message)
+                        var r = jQuery.parseJSON(data.responseText);
+                        console.log("r")
+                        console.log(r)
+
+                        alert(r.message);
                     }
                 });
                 e.preventDefault(); // avoid to execute the actual submit of the form
