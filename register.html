@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -31,6 +30,7 @@
 
         });
     </script>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body>
     <!-- HEADER -->
@@ -91,6 +91,24 @@
 </html>
 
 <script>
+    $(document).ready(function() {
+
+        $("#register-form").submit(function() { // intercepts the submit event
+            $.ajax({ // make an AJAX request
+                type: "POST",
+                url: "B", // it's the URL of your component B
+                data: $("#register-form").serialize(), // serializes the form's elements
+                success: function(data)
+                {
+                    console.log(data)
+                    // show the data you got from B in result div
+                    $("#result").html(data);
+                }
+            });
+            e.preventDefault(); // avoid to execute the actual submit of the form
+        });
+
+    });
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
