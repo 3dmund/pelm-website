@@ -40,6 +40,7 @@
                         $('#client_secret').html(client_secret)
                     },
                     error: function (data) {
+                        console.log("ERROR");
                         var r = jQuery.parseJSON(data.responseText);
                         alert("Message: " + r.Message);
                         alert("StackTrace: " + r.StackTrace);
