@@ -22,17 +22,22 @@
                     success: function(data)
                     {
                         console.log(data)
-                        $("#register-form").hide()
+                        // $("#register-form").hide()
+                        $('#form').hide()
+                        $('#confirmation').show()
                         // show the data you got from B in result div
 
                         var client_id = data.client_id
+                        var client_secret = data.client_secret
                         var client_id2 = data['client_id']
                         console.log(client_id)
                         console.log(client_id2)
 
                         var html = "<div class='new'>" + client_id + "</div>"
 
-                        $("#result").html(html);
+                        // $("#result").html(html);
+                        $('#client_id').html(client_id)
+                        $('#client_secret').html(client_secret)
                     }
                 });
                 e.preventDefault(); // avoid to execute the actual submit of the form
@@ -57,45 +62,55 @@
     <div class="section-outer">
 <!--        <div style = "margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column">-->
         <div class="register-form-section-inner">
-            <div style="font-size: 40px; font-family:roboto,sans-serif; margin-bottom: 40px; font-weight:500;">Sign up for Pelm Beta</div>
+            <div id="form">
+                <div style="font-size: 40px; font-family:roboto,sans-serif; margin-bottom: 40px; font-weight:500;">Sign up for Pelm Beta</div>
 
-<!--            <div id="contact-form-outer">-->
-            <form id="register-form" action="https://api.pelm.com/register" method="POST">
-<!--                <form action="http://127.0.0.1:5000/auth/register" method="POST">-->
-                <p class="register-form-row">
-                    <input class="text-field" name="name" id="name" placeholder="Full Name*" required/>
-                </p>
-                <p class="register-form-row">
-                    <input class="text-field" name="email" id="email" placeholder="Email*" required pattern=".+@.+\..+" title="Please enter a valid email"/>
-                </p>
-                <p class="register-form-row">
-                    <input class="text-field" type="password" name="password" id="password" placeholder="Password*" required/>
-                </p>
-                <p class="register-form-row">
-                    <input class="text-field" name="redirect_uri" id="redirect_uri" placeholder="Redirect URI*" required pattern=".+\..+" title="Please enter a valid URI"/>
-                </p>
-                <p class="register-form-row">
-                    <input class="text-field" name="company" id="company" placeholder="Company*" required/>
-                </p>
-                <p class="register-form-row">
+                <!--            <div id="contact-form-outer">-->
+                <form id="register-form" action="https://api.pelm.com/register" method="POST">
+                    <!--                <form action="http://127.0.0.1:5000/auth/register" method="POST">-->
+                    <p class="register-form-row">
+                        <input class="text-field" name="name" id="name" placeholder="Full Name*" required/>
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" name="email" id="email" placeholder="Email*" required pattern=".+@.+\..+" title="Please enter a valid email"/>
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" type="password" name="password" id="password" placeholder="Password*" required/>
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" name="redirect_uri" id="redirect_uri" placeholder="Redirect URI*" required pattern=".+\..+" title="Please enter a valid URI"/>
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" name="company" id="company" placeholder="Company*" required/>
+                    </p>
+                    <p class="register-form-row">
                     <div class="custom-select" style="">
-                      <select name="app_type" id="app_type" required>
-                        <option value="">What are you building?*</option>
-                        <option value="web_app">Web App</option>
-                        <option value="mobile_app">Mobile App</option>
-                        <option value="single_page_app">Single Page App</option>
-                      </select>
+                        <select name="app_type" id="app_type" required>
+                            <option value="">What are you building?*</option>
+                            <option value="web_app">Web App</option>
+                            <option value="mobile_app">Mobile App</option>
+                            <option value="single_page_app">Single Page App</option>
+                        </select>
                     </div>
-                </p>
-                <input id="submit" type="submit" class="submit-form-button" value="Create account"/>
-                </p>
-            </form>
+                    </p>
+                    <input id="submit" type="submit" class="submit-form-button" value="Create account"/>
+                    </p>
+                </form>
+            </div>
+            <div id="confirmation" style="display: none;">
+                This is the confirmation page. Yay!
+
+                <div id="client_id"></div>
+                <div id="client_secret"></div>
+
+            </div>
+
 <!--            </div>-->
 
         </div>
     </div>
 
-    <div id="result"></div>
+<!--    <div id="result"></div>-->
 
 </body>
 </html>
