@@ -13,7 +13,7 @@
     <script>
         $(document).ready(function() {
 
-            $("#register-form").submit(function() { // intercepts the submit event
+            $("#register-form").submit(function(e) { // intercepts the submit event
                 console.log("CCC")
                 $.ajax({ // make an AJAX request
                     type: "POST",
