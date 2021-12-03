@@ -93,7 +93,7 @@
 <script>
     $(document).ready(function() {
 
-        $("#register-form").submit(function() { // intercepts the submit event
+        $("#register-form").submit(function(e) { // intercepts the submit event
             $.ajax({ // make an AJAX request
                 type: "POST",
                 url: "B", // it's the URL of your component B
