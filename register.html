@@ -7,8 +7,39 @@
   <title>Pelm - Register</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+      $(document).ready(function() {
+
+          $("#register-form").submit(function(e) { // intercepts the submit event
+              console.log("CCC")
+              $.ajax({ // make an AJAX request
+                  type: "POST",
+                  url: "https://api.pelm.com/register", // it's the URL of your component B
+                  data: $("#register-form").serialize(), // serializes the form's elements
+                  success: function(data)
+                  {
+                      $('#form').hide()
+                      $('#confirmation').show()
+
+                      var client_id = data.client_id
+                      var client_secret = data.client_secret
+
+                      $('#client_id').html(client_id)
+                      $('#client_secret').html(client_secret)
+                  },
+                  error: function (data) {
+                      var r = jQuery.parseJSON(data.responseText);
+
+                      alert(r.message);
+                  }
+              });
+              e.preventDefault(); // avoid to execute the actual submit of the form
+          });
+
+      });
+  </script>
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload" style = "margin: 0px;">
@@ -41,44 +72,62 @@
     </div>
   </div>
 
-    <div class="section-outer">
-<!--        <div style = "margin-top: 100px; margin-bottom: 100px; display: flex; flex-direction: column">-->
-        <div class="register-form-section-inner">
-            <div style="font-size: 40px; font-family:roboto,sans-serif; margin-bottom: 40px; font-weight:500;">Sign up for Pelm Beta</div>
-
-<!--            <div id="contact-form-outer">-->
-            <form action="https://api.pelm.com/register" method="POST">
-<!--                <form action="http://127.0.0.1:5000/auth/register" method="POST">-->
-                <p class="register-form-row">
-                    <input class="text-field" name="name" id="name" placeholder="Full Name*" required/>
-                </p>
-                <p class="register-form-row">
-                    <input class="text-field" name="email" id="email" placeholder="Email*" required pattern=".+@.+\..+" title="Please enter a valid email"/>
-                </p>
-                <p class="register-form-row">
-                    <input class="text-field" type="password" name="password" id="password" placeholder="Password*" required/>
-                </p>
-                <p class="register-form-row">
-                    <input class="text-field" name="redirect_uri" id="redirect_uri" placeholder="Redirect URI*" required pattern=".+\..+" title="Please enter a valid URI"/>
-                </p>
-                <p class="register-form-row">
-                    <input class="text-field" name="company" id="company" placeholder="Company*" required/>
-                </p>
-                <p class="register-form-row">
+    <div class="section-outer" style="width: 100%;">
+        <div class="register-page-section-inner">
+            <div id="form" class="register-form-container">
+                <div style="font-size: 40px; font-family:roboto,sans-serif; margin-bottom: 40px; font-weight:500;">Sign up for Pelm Beta</div>
+                <form id="register-form" action="https://api.pelm.com/register" method="POST">
+                    <p class="register-form-row">
+                        <input class="text-field" name="name" id="name" placeholder="Full Name*" required/>
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" name="email" id="email" placeholder="Email*" required pattern=".+@.+\..+" title="Please enter a valid email"/>
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" type="password" name="password" id="password" placeholder="Password*" required/>
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" name="redirect_uri" id="redirect_uri" placeholder="Redirect URI*" required pattern=".+\..+" title="Please enter a valid URI"/>
+                    </p>
+                    <p class="register-form-row">
+                        <input class="text-field" name="company" id="company" placeholder="Company*" required/>
+                    </p>
+                    <p class="register-form-row">
                     <div class="custom-select" style="">
-                      <select name="app_type" id="app_type" required>
-                        <option value="">What are you building?*</option>
-                        <option value="web_app">Web App</option>
-                        <option value="mobile_app">Mobile App</option>
-                        <option value="single_page_app">Single Page App</option>
-                      </select>
+                        <select name="app_type" id="app_type" required>
+                            <option value="">What are you building?*</option>
+                            <option value="web_app">Web App</option>
+                            <option value="mobile_app">Mobile App</option>
+                            <option value="single_page_app">Single Page App</option>
+                        </select>
                     </div>
-                </p>
-                <input id="submit" type="submit" class="submit-form-button" value="Create account"/>
-                </p>
-            </form>
-<!--            </div>-->
+                    </p>
+                    <input id="submit" type="submit" class="submit-form-button" value="Create account"/>
+                    </p>
+                </form>
+            </div>
+            <div id="confirmation" class="register-confirmation-container">
+                <h2 style="margin-bottom: 10px;">You've successfully registered with Pelm.</h2>
 
+                <p>
+                    Here are your client credentials. Please store them in a secure location.
+                    </br>
+                    </br>
+                    Client id: <strong id="client_id"></strong>
+                    </br>
+                    Client secret: <strong id="client_secret"></strong>
+                    </br>
+                    </br>
+                    Quickly get started by visiting our <a style="color: #0000EE" href="https://pelm.readme.io/reference/quick-start-guide" target="_blank">Quick Start Guide</a>.
+                    </br>
+                    If you have any questions, email <strong>info@pelm.com</strong>
+                </p>
+
+                <form action="https://pelm.readme.io/reference/welcome" target="_blank">
+                    <input type="submit" class="submit-form-button" value="Get Started"/>
+                </form>
+
+            </div>
         </div>
     </div>
 
@@ -123,6 +172,7 @@
 </html>
 
 <script>
+
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
