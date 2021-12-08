@@ -482,19 +482,19 @@ strong {
 
 
 #privacy-and-security-policy h2 {
-  font-size: 30px; font-family:roboto-bold,roboto,sans-serif
+  font-size: 24px; font-family:roboto,sans-serif; font-weight: 500;
 }
 
 #privacy-and-security-policy h3 {
-  font-size: 30px; font-family:roboto-bold,roboto,sans-serif
+  font-size: 20px; font-family:roboto-bold,roboto,sans-serif
 }
 
 #privacy-and-security-policy p {
-    font-size: 23px; font-family:roboto,sans-serif; color: #666666;
+    font-size: 18px; font-family:roboto,sans-serif; color: #666666; font-weight: 400;
 }
 
 #privacy-and-security-policy li {
-  font-size: 23px; font-family:roboto,sans-serif; color: #666666;
+  font-size: 18px; font-family:roboto,sans-serif; color: #666666;
 }
 
 .privacy-and-security-policy-h1 {
@@ -502,11 +502,11 @@ strong {
 }
 
 .privacy-and-security-policy-h2 {
-  font-size: 30px; font-family:roboto-bold,roboto,sans-serif
+  font-size: 24px; font-family:roboto-bold,roboto,sans-serif
 }
 
 .privacy-and-security-policy-h3 {
-  font-size: 23px; font-family:roboto-bold,roboto,sans-serif
+  font-size: 24px; font-family:roboto-bold,roboto,sans-serif
 }
 
 .privacy-and-security-policy-body {
