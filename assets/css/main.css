@@ -11,7 +11,8 @@ h1 {
 h2 {
   font-size: 25px;
   font-weight: normal;
-  font-family:roboto-bold,roboto,sans-serif;
+  font-family:roboto,sans-serif;
+  font-weight: 500;
   margin: 0 0 0 0;
 }
 

@@ -2,6 +2,10 @@
     display: flex; justify-content: space-between;
 }
 
+.product-steps-section-inner{
+    color: white;
+}
+
 .product-intro-illustration {
     width: 350px;
 }
@@ -32,6 +36,7 @@
     margin-bottom: 40px;
     font-family:roboto,sans-serif;
     font-weight: 400;
+    color: white;
 }
 
 
@@ -44,4 +49,12 @@
         font-size: 30px;
         margin-bottom: 20px;
     }
+}
+
+.logo-row {
+  display: flex;
+}
+
+.logo-column {
+  flex: 50%;
 }

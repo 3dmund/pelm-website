@@ -50,28 +50,45 @@
       <div style = "width: 500px">
         <h1 class="title">One API.</br>Countless Utilities</h1>
         <p class="intro-sub-title">
-          Pelm provides a level of abstraction on top of the APIs of utility companies. We handle the authentication and querying logic for various utilities, so you can focus on what matters most.
+          Pelm provides a level of abstraction on top of the utility companies. We handle the authentication and querying logic for various utilities, so you can focus on what matters most.
         </p>
       </div>
       <img class="product-intro-illustration" src="images/illustration-lightning.png" />
     </div>
-
   </div>
 
 <!-- STEPS -->
-<div id="steps" class="section-outer">
+<div id="steps" class="section-outer info-section-outer">
     <div class="section-inner product-steps-section-inner">
-    <h1 class="product-steps-h1">Start querying energy data in two easy steps</h1>
-      <ol>
-        <li>Permission a user's data</li>
-        <p id="product-step1">
-          We’ll redirect the user to their utility provider to grant Pelm acess to their data and permission to share that data with you. Once the user completes the auth flow, we redirect them to the redirect URL provided by you and share an OAuth token with you.
-        </p>
-        <li>Query usage intervals</li>
-        <p>
-          Make a request to our endpoint to get interval data, and we’ll send you back a JSON response based on the parameters you specify (time range, energy account, etc).
-        </p>
-      </ol>
+      <h1 class="product-steps-h1">Start querying energy data in two easy steps</h1>
+        <ol>
+          <li>Permission a user's data</li>
+          <p id="product-step1">
+            We’ll redirect the user to their utility provider to grant Pelm access to their data and permission to share that data with you. Once the user completes the authorization flow, we redirect them to your redirect URL and share an OAuth token with you.
+          </p>
+          <li>Query usage intervals</li>
+          <p id="product-step1">
+            Make a request to our endpoint to get interval data, and we’ll send you back a JSON response based on the parameters you specify (time range, energy account, etc).
+          </p>
+        </ol>
+    </div>
+  </div>
+
+  <div id="steps" class="section-outer">
+    <div class="section-inner" style="text-align: center;">
+      <h1 class="product-steps-h1">We currently support:</h1>
+      </br>
+      <div class="logo-row">
+        <div class="logo-column">
+          <img class="product-intro-illustration" src="images/pge.png" />
+        </div>
+        <div class="logo-column">
+          <img class="product-intro-illustration" src="images/sce.png" />
+        </div>
+      </div>
+      <div style="padding-top: 100px;">
+        <p style="color: black;">Is there a utility you'd like us to integrate with next? Email us at <a href="mailto:info@pelm.com">info@pelm.com</a></p>
+      </div>
     </div>
   </div>
 
